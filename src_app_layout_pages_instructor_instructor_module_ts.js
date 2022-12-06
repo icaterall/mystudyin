@@ -9449,7 +9449,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "InstructorDashboardService": () => (/* binding */ InstructorDashboardService)
 /* harmony export */ });
-/* harmony import */ var _env_environment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @env/environment */ 18153);
+/* harmony import */ var environments_environment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! environments/environment */ 92340);
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ 84505);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 22560);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ 58987);
@@ -9488,7 +9488,7 @@ class InstructorDashboardService {
     }
     //------Update general info
     updateGeneral(generalInfo, userId) {
-        return this._httpClient.put(`${_env_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl}users/instructor_general_info/${userId}`, generalInfo);
+        return this._httpClient.put(`${environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl}users/instructor_general_info/${userId}`, generalInfo);
     }
     /**
      * Get rows
@@ -9504,25 +9504,25 @@ class InstructorDashboardService {
      * Get instructor info
      */
     getInstructorInfo(instructorId) {
-        return this._httpClient.get(`${_env_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl}users/${instructorId}`);
+        return this._httpClient.get(`${environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl}users/${instructorId}`);
     }
     /**
      * Get rows
      */
     getCourses(instructorId) {
-        return this._httpClient.get(`${_env_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl}courses/instructor-courses/${instructorId}`);
+        return this._httpClient.get(`${environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl}courses/instructor-courses/${instructorId}`);
     }
     /**
      * Get courses count
      */
     getCoursesCount(instructorId) {
-        return this._httpClient.get(`${_env_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl}courses/instructor-courses/count/${instructorId}`);
+        return this._httpClient.get(`${environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl}courses/instructor-courses/count/${instructorId}`);
     }
     /**
    * Get courses count
    */
     deleteCourse(instructorId, courseId) {
-        return this._httpClient.delete(`${_env_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl}courses/instructor-courses/delete/${instructorId}/${courseId}`);
+        return this._httpClient.delete(`${environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl}courses/instructor-courses/delete/${instructorId}/${courseId}`);
     }
 }
 InstructorDashboardService.ɵfac = function InstructorDashboardService_Factory(t) { return new (t || InstructorDashboardService)(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_4__.HttpClient), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵinject"](app_auth_service__WEBPACK_IMPORTED_MODULE_1__.AuthenticationService)); };
@@ -9845,7 +9845,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "AssetService": () => (/* binding */ AssetService)
 /* harmony export */ });
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ 66587);
-/* harmony import */ var _env_environment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @env/environment */ 18153);
+/* harmony import */ var environments_environment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! environments/environment */ 92340);
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ 47418);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ 2508);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 22560);
@@ -9862,7 +9862,7 @@ class AssetService {
         // Set the defaults
         this.http = http;
         this.formBuilder = formBuilder;
-        this.apiURLAssets = _env_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl + 'assets';
+        this.apiURLAssets = environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl + 'assets';
         this.youTubeApiKey = 'AIzaSyCUGTLCPqwF0kLzy81zT6WdNnwQL8ArfMk';
     }
     //Initiate Form
@@ -9967,7 +9967,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ 84505);
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ 66587);
-/* harmony import */ var _env_environment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @env/environment */ 18153);
+/* harmony import */ var environments_environment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! environments/environment */ 92340);
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ 47418);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 22560);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common/http */ 58987);
@@ -9979,8 +9979,8 @@ __webpack_require__.r(__webpack_exports__);
 class AssignmentService {
     constructor(http) {
         this.http = http;
-        this.apiURLAssignments = _env_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl + 'assignments';
-        this.apiURLAssignmentQuestions = _env_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl + 'assignment-questions';
+        this.apiURLAssignments = environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl + 'assignments';
+        this.apiURLAssignmentQuestions = environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl + 'assignment-questions';
         // Set the defaults
         this.onChapterEditChanged = new rxjs__WEBPACK_IMPORTED_MODULE_1__.BehaviorSubject({});
     }

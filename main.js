@@ -4968,25 +4968,6 @@ CoreTranslationService.ɵprov = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MO
 
 /***/ }),
 
-/***/ 18153:
-/*!******************************************!*\
-  !*** ./src/@environments/environment.ts ***!
-  \******************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "environment": () => (/* binding */ environment)
-/* harmony export */ });
-const environment = {
-    production: false,
-    hmr: false,
-    apiUrl: "http://localhost:3000/api/v1/"
-};
-
-
-/***/ }),
-
 /***/ 45529:
 /*!*******************************!*\
   !*** ./src/app/app-config.ts ***!
@@ -5755,7 +5736,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "JwtInterceptor": () => (/* binding */ JwtInterceptor)
 /* harmony export */ });
-/* harmony import */ var _env_environment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @env/environment */ 18153);
+/* harmony import */ var environments_environment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! environments/environment */ 92340);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 22560);
 /* harmony import */ var app_auth_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/auth/service */ 81004);
 
@@ -5777,7 +5758,7 @@ class JwtInterceptor {
     intercept(request, next) {
         const currentUser = this._authenticationService.currentUserValue;
         const isLoggedIn = currentUser && currentUser.token;
-        const isApiUrl = request.url.startsWith(_env_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl);
+        const isApiUrl = request.url.startsWith(environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl);
         if (isLoggedIn && isApiUrl) {
             request = request.clone({
                 setHeaders: {
@@ -5806,7 +5787,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ 84505);
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ 86942);
-/* harmony import */ var _env_environment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @env/environment */ 18153);
+/* harmony import */ var environments_environment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! environments/environment */ 92340);
 /* harmony import */ var app_models__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! app/models */ 42139);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 22560);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common/http */ 58987);
@@ -5853,7 +5834,7 @@ class AuthenticationService {
         return this.currentUser && this.currentUserSubject.value.role === app_models__WEBPACK_IMPORTED_MODULE_1__.Role.Instructor;
     }
     register(user) {
-        return this._http.post(`${_env_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl}users/register`, user);
+        return this._http.post(`${environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl}users/register`, user);
     }
     /**
      * User login
@@ -5864,7 +5845,7 @@ class AuthenticationService {
      */
     login(email, password) {
         return this._http
-            .post(`${_env_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl}user/authenticate`, { email, password })
+            .post(`${environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl}user/authenticate`, { email, password })
             .pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_3__.map)(user => {
             // login successful if there's a jwt token in the response
             if (user && user.token) {
@@ -5928,7 +5909,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "UserService": () => (/* binding */ UserService)
 /* harmony export */ });
-/* harmony import */ var _env_environment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @env/environment */ 18153);
+/* harmony import */ var environments_environment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! environments/environment */ 92340);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 22560);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ 58987);
 
@@ -5946,13 +5927,13 @@ class UserService {
      * Get all users
      */
     getAll() {
-        return this._http.get(`${_env_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl}/users`);
+        return this._http.get(`${environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl}/users`);
     }
     /**
      * Get user by id
      */
     getById(id) {
-        return this._http.get(`${_env_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl}/users/${id}`);
+        return this._http.get(`${environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl}/users/${id}`);
     }
 }
 UserService.ɵfac = function UserService_Factory(t) { return new (t || UserService)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__.HttpClient)); };
@@ -11858,7 +11839,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "AccountSettingsService": () => (/* binding */ AccountSettingsService)
 /* harmony export */ });
-/* harmony import */ var _env_environment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @env/environment */ 18153);
+/* harmony import */ var environments_environment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! environments/environment */ 92340);
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ 84505);
 /* harmony import */ var i18n_iso_countries__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! i18n-iso-countries */ 84083);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 22560);
@@ -11915,7 +11896,7 @@ class AccountSettingsService {
     }
     //------Update general info
     updateGeneral(generalInfo, userId) {
-        return this._httpClient.put(`${_env_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl}users/instructor_general_info/${userId}`, generalInfo);
+        return this._httpClient.put(`${environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl}users/instructor_general_info/${userId}`, generalInfo);
     }
     /**
      * Get rows
@@ -11946,7 +11927,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ 84505);
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ 66587);
-/* harmony import */ var _env_environment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @env/environment */ 18153);
+/* harmony import */ var environments_environment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! environments/environment */ 92340);
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ 47418);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 22560);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common/http */ 58987);
@@ -11958,8 +11939,8 @@ __webpack_require__.r(__webpack_exports__);
 class CategoryService {
     constructor(http) {
         this.http = http;
-        this.apiURLCategories = _env_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl + 'categories';
-        this.apiURLSubCategories = _env_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl + 'sub-categories';
+        this.apiURLCategories = environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl + 'categories';
+        this.apiURLSubCategories = environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl + 'sub-categories';
         // Set the defaults
         this.onCategoryEditChanged = new rxjs__WEBPACK_IMPORTED_MODULE_1__.BehaviorSubject({});
     }
@@ -12026,7 +12007,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "ChapterService": () => (/* binding */ ChapterService)
 /* harmony export */ });
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ 84505);
-/* harmony import */ var _env_environment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @env/environment */ 18153);
+/* harmony import */ var environments_environment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! environments/environment */ 92340);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 22560);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 58987);
 
@@ -12036,9 +12017,9 @@ __webpack_require__.r(__webpack_exports__);
 class ChapterService {
     constructor(http) {
         this.http = http;
-        this.apiURLChapters = _env_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl + 'chapters';
-        this.apiURLLectures = _env_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl + 'lectures';
-        this.apiURLAssets = _env_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl + 'assets';
+        this.apiURLChapters = environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl + 'chapters';
+        this.apiURLLectures = environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl + 'lectures';
+        this.apiURLAssets = environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl + 'assets';
         // Set the defaults
         this.onChapterEditChanged = new rxjs__WEBPACK_IMPORTED_MODULE_1__.BehaviorSubject({});
     }
@@ -12123,7 +12104,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "CourseService": () => (/* binding */ CourseService)
 /* harmony export */ });
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ 84505);
-/* harmony import */ var _env_environment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @env/environment */ 18153);
+/* harmony import */ var environments_environment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! environments/environment */ 92340);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 22560);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 58987);
 
@@ -12133,7 +12114,7 @@ __webpack_require__.r(__webpack_exports__);
 class CourseService {
     constructor(http) {
         this.http = http;
-        this.apiURLCourses = _env_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl + 'courses';
+        this.apiURLCourses = environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl + 'courses';
         // Set the defaults
         this.onCourseEditChanged = new rxjs__WEBPACK_IMPORTED_MODULE_1__.BehaviorSubject({});
     }
@@ -12179,7 +12160,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "LectureService": () => (/* binding */ LectureService)
 /* harmony export */ });
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ 84505);
-/* harmony import */ var _env_environment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @env/environment */ 18153);
+/* harmony import */ var environments_environment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! environments/environment */ 92340);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 22560);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 58987);
 
@@ -12189,7 +12170,7 @@ __webpack_require__.r(__webpack_exports__);
 class LectureService {
     constructor(http) {
         this.http = http;
-        this.apiURLLectures = _env_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl + 'lectures';
+        this.apiURLLectures = environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl + 'lectures';
         // Set the defaults
         this.onLectureEditChanged = new rxjs__WEBPACK_IMPORTED_MODULE_1__.BehaviorSubject({});
     }
@@ -12229,7 +12210,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "StudentProfileService": () => (/* binding */ StudentProfileService)
 /* harmony export */ });
-/* harmony import */ var _env_environment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @env/environment */ 18153);
+/* harmony import */ var environments_environment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! environments/environment */ 92340);
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ 84505);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 22560);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ 58987);
@@ -12268,7 +12249,7 @@ class StudentProfileService {
     }
     //------Update general info
     updateGeneral(generalInfo, userId) {
-        return this._httpClient.put(`${_env_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl}users/instructor_general_info/${userId}`, generalInfo);
+        return this._httpClient.put(`${environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl}users/instructor_general_info/${userId}`, generalInfo);
     }
     /**
      * Get rows
@@ -12284,25 +12265,25 @@ class StudentProfileService {
      * Get Student info
      */
     getStudentInfo(studentId) {
-        return this._httpClient.get(`${_env_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl}users/${studentId}`);
+        return this._httpClient.get(`${environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl}users/${studentId}`);
     }
     /**
      * Get rows
      */
     getCourses(packageId) {
-        return this._httpClient.get(`${_env_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl}courses/student-courses/${packageId}`);
+        return this._httpClient.get(`${environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl}courses/student-courses/${packageId}`);
     }
     /**
      * Get courses count
      */
     getCoursesCount(instructorId) {
-        return this._httpClient.get(`${_env_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl}courses/instructor-courses/count/${instructorId}`);
+        return this._httpClient.get(`${environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl}courses/instructor-courses/count/${instructorId}`);
     }
     /**
    * Get courses count
    */
     deleteCourse(instructorId, courseId) {
-        return this._httpClient.delete(`${_env_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl}courses/instructor-courses/delete/${instructorId}/${courseId}`);
+        return this._httpClient.delete(`${environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl}courses/instructor-courses/delete/${instructorId}/${courseId}`);
     }
 }
 StudentProfileService.ɵfac = function StudentProfileService_Factory(t) { return new (t || StudentProfileService)(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_4__.HttpClient), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵinject"](app_auth_service__WEBPACK_IMPORTED_MODULE_1__.AuthenticationService)); };
@@ -12323,7 +12304,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ 84505);
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ 66587);
-/* harmony import */ var _env_environment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @env/environment */ 18153);
+/* harmony import */ var environments_environment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! environments/environment */ 92340);
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ 47418);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 22560);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common/http */ 58987);
@@ -12335,7 +12316,7 @@ __webpack_require__.r(__webpack_exports__);
 class StudentService {
     constructor(http) {
         this.http = http;
-        this.apiURLUsers = _env_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl + 'users';
+        this.apiURLUsers = environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl + 'users';
         // Set the defaults
         this.onCategoryEditChanged = new rxjs__WEBPACK_IMPORTED_MODULE_1__.BehaviorSubject({});
     }
@@ -12385,6 +12366,25 @@ StudentService.ɵprov = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_4__
 
 /***/ }),
 
+/***/ 92340:
+/*!*****************************************!*\
+  !*** ./src/environments/environment.ts ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "environment": () => (/* binding */ environment)
+/* harmony export */ });
+const environment = {
+    production: true,
+    hmr: false,
+    apiUrl: "https://coaching.herokuapp.com/api/v1/"
+};
+
+
+/***/ }),
+
 /***/ 84187:
 /*!********************!*\
   !*** ./src/hmr.ts ***!
@@ -12425,18 +12425,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/platform-browser */ 34497);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 22560);
 /* harmony import */ var _app_app_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app/app.module */ 36747);
-/* harmony import */ var _env_environment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @env/environment */ 18153);
+/* harmony import */ var environments_environment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! environments/environment */ 92340);
 /* harmony import */ var _hmr__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./hmr */ 84187);
 
 
 
 
 
-if (_env_environment__WEBPACK_IMPORTED_MODULE_1__.environment.production) {
+if (environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.production) {
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_3__.enableProdMode)();
 }
 const bootstrap = () => _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__.platformBrowser().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_0__.AppModule);
-if (_env_environment__WEBPACK_IMPORTED_MODULE_1__.environment.hmr) {
+if (environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.hmr) {
     if (false) {}
     else {
         console.error('HMR is not enabled for webpack-dev-server!');

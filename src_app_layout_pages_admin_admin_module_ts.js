@@ -6070,7 +6070,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ 84505);
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ 66587);
-/* harmony import */ var _env_environment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @env/environment */ 18153);
+/* harmony import */ var environments_environment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! environments/environment */ 92340);
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ 47418);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 22560);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common/http */ 58987);
@@ -6082,8 +6082,8 @@ __webpack_require__.r(__webpack_exports__);
 class FacultyService {
     constructor(http) {
         this.http = http;
-        this.apiURLFaculties = _env_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl + 'faculties';
-        this.apiURLPrograms = _env_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl + 'programs';
+        this.apiURLFaculties = environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl + 'faculties';
+        this.apiURLPrograms = environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl + 'programs';
         // Set the defaults
         this.onfacultyEditChanged = new rxjs__WEBPACK_IMPORTED_MODULE_1__.BehaviorSubject({});
     }
@@ -6148,7 +6148,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ 84505);
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ 66587);
-/* harmony import */ var _env_environment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @env/environment */ 18153);
+/* harmony import */ var environments_environment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! environments/environment */ 92340);
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ 47418);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 22560);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common/http */ 58987);
@@ -6160,8 +6160,8 @@ __webpack_require__.r(__webpack_exports__);
 class ProgramService {
     constructor(http) {
         this.http = http;
-        this.apiURLFaculties = _env_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl + 'faculties';
-        this.apiURLPrograms = _env_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl + 'programs';
+        this.apiURLFaculties = environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl + 'faculties';
+        this.apiURLPrograms = environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl + 'programs';
         // Set the defaults
         this.onFacultyChanged = new rxjs__WEBPACK_IMPORTED_MODULE_1__.BehaviorSubject({});
     }
@@ -6242,7 +6242,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ 84505);
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ 66587);
-/* harmony import */ var _env_environment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @env/environment */ 18153);
+/* harmony import */ var environments_environment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! environments/environment */ 92340);
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ 47418);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 22560);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common/http */ 58987);
@@ -6254,8 +6254,8 @@ __webpack_require__.r(__webpack_exports__);
 class SubCategoryService {
     constructor(http) {
         this.http = http;
-        this.apiURLCategories = _env_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl + 'categories';
-        this.apiURLSubCategories = _env_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl + 'sub-categories';
+        this.apiURLCategories = environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl + 'categories';
+        this.apiURLSubCategories = environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment.apiUrl + 'sub-categories';
         // Set the defaults
         this.onCategoryChanged = new rxjs__WEBPACK_IMPORTED_MODULE_1__.BehaviorSubject({});
     }
